@@ -21,7 +21,7 @@ const SERVICES: ServiceItem[] = [
     name: 'TV Campaigns', 
     category: 'Media Solution', 
     tag: 'Broadcast', 
-    image: 'https://images.unsplash.com/photo-1590248463999-f2f6230f2c41?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://www.liftupmarketing.in/blog/wp-content/uploads/2024/08/3-media-trends-affecting-the-success-of-tv-advertising-this-year-735x400.png',
     description: 'Prime-time features, panel discussions, and doctor visibility on major networks to reach millions.'
   },
   { 
@@ -29,7 +29,7 @@ const SERVICES: ServiceItem[] = [
     name: 'Radio & Audio', 
     category: 'Audio Outreach', 
     tag: 'FM & Podcast', 
-    image: 'https://images.unsplash.com/photo-1593697972466-9e67a7b8e1a1?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://be-media.com.pl/wp-content/uploads/2024/09/radio-1-820x541.jpg',
     description: 'Doctor bytes, RJ-led talks, and multilingual capsules. Specialized podcasts for expert insights.'
   },
   { 
@@ -45,7 +45,7 @@ const SERVICES: ServiceItem[] = [
     name: 'Digital & Social', 
     category: 'Online Growth', 
     tag: 'Engagement', 
-    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://www.beingdigitalz.com/blog/wp-content/uploads/2025/01/types-of-social-media-marketing.png',
     description: 'Geo-targeted ads, Google My Business optimization, and local outreach strategies to boost engagement.'
   },
   { 
@@ -68,14 +68,14 @@ const SERVICES: ServiceItem[] = [
 
 // Updated Book List based on provided images
 const PUBLISHING_ITEMS = [
-  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20' },
-  { name: 'Dr. Moneywise', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30' },
-  { name: 'The Personal Finance Book', author: 'Amar Pandit', desc: 'The ultimate financial guide for Doctors.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30' },
-  { name: 'Immunize Your Financial Health', author: 'Amit Trivedi et al.', desc: '#Pandemic #Corona special edition.', price: 'Guide', color: 'white', accent: 'bg-white/5 border-white/20' },
-  { name: 'Fintegrity', author: 'Keval Bhanushali', desc: 'Integrity in the world of finance.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30' },
-  { name: 'Credit Report Screwed Up?', author: 'Aparna Ramachandra', desc: 'Why is it screwed up and how to fix it.', price: 'Guide', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30' },
-  { name: 'The Happy Rich Advisor', author: 'Amar Pandit', desc: 'Build the wealth management firm of the future.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20' },
-  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30' },
+  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'Dr. Moneywise', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560eb3e?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'The Personal Finance Book', author: 'Amar Pandit', desc: 'The ultimate financial guide for Doctors.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1565514020176-dbf2277cc165?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'Immunize Your Financial Health', author: 'Amit Trivedi et al.', desc: '#Pandemic #Corona special edition.', price: 'Guide', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1584697964405-b9171766c3a2?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'Fintegrity', author: 'Keval Bhanushali', desc: 'Integrity in the world of finance.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'Credit Report Screwed Up?', author: 'Aparna Ramachandra', desc: 'Why is it screwed up and how to fix it.', price: 'Guide', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1554224154-260327c00c40?q=80&w=1000&auto=format&fit=crop' },
+  { name: 'The Happy Rich Advisor', author: 'Amar Pandit', desc: 'Build the wealth management firm of the future.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop' },
+  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1000&auto=format&fit=crop' },
 ];
 
 const TEAM_MEMBERS: TeamMember[] = [
@@ -84,7 +84,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: 'Anusha Ramani',
     role: 'Founder & CEO',
     // Professional woman
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop',
+    image: 'https://aicdn.picsart.com/56e1982a-2546-4911-994e-d5661968ad4e.jpg',
     bio: 'Visionary leader and strategist who founded FLC to bring rare, breakthrough ideas to healthcare and lifestyle media.'
   },
   {
@@ -92,24 +92,24 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: 'Alok Dubey',
     role: 'Business Head',
     // Professional man, glasses
-    image: 'https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop',
+    image: 'https://flcmediasolutions.netlify.app/src/WhatsApp%20Image%202025-09-22%20at%2010.32.25_0bc6801c.jpg',
     bio: 'I bring proven sales experience along with a solid media background, having successfully managed and executed diversified campaigns across TV, radio, digital, print, and on-ground events.',
     fullBio: 'I bring proven sales experience along with a solid media background, having successfully managed and executed diversified campaigns across TV, radio, digital, print, and on-ground events. Over the years, I have delivered integrated media solutions ranging from launch campaigns and brand activations to pocket songs, podcasts, and other innovative formats for multiple pharmaceutical companies and brands. My exposure to handling cross-platform campaigns has given me a strong understanding of market trends, client needs, and result-oriented execution. Academically, I hold a degree in Sales and Marketing from JK College, Ghansoli, Navi Mumbai, which has strengthened my foundation and complements my professional journey.'
   },
   {
     id: '3',
     name: 'Pratik Tiwari',
-    role: 'Innovation & Tech Lead',
+    role: 'Innovative Technical Lead',
     // Young man, casual/hoodie vibe
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop',
+    image: 'https://aicdn.picsart.com/9eb9221e-e0ac-4595-a0c8-43050d8c0dcf.jpg',
     bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools.'
   },
   {
     id: '4',
     name: 'Maharishi Singh',
-    role: 'Social Media Manager',
+    role: 'Social Media Creator',
     // Creative professional
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop',
+    image: 'https://flcmediasolutions.netlify.app/src/Screenshot%202025-10-10%20125103.png',
     bio: 'Creative strategist behind FLC\'s social media presence, designing engaging campaigns, thematic rollouts & influencer collaborations.'
   },
   {
@@ -117,7 +117,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: 'Vivek Dubey',
     role: 'Video Editor Intern',
     // Young creative
-    image: 'https://images.unsplash.com/photo-1488161628813-99c974a5cd14?q=80&w=800&auto=format&fit=crop',
+    image: 'https://flcmediasolutions.netlify.app/src/WhatsApp%20Image%202025-09-22%20at%2015.12.40_5eda09c8.jpg',
     bio: 'A young, passionate creative mind assisting in editing, post-production, and design integration. Brings fresh energy to FLC\'s high-quality video outputs.'
   },
   {
@@ -125,7 +125,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     name: 'Abrar Khan',
     role: 'Books Publisher',
     // Professional man
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop',
+    image: 'https://aicdn.picsart.com/52669918-815e-4a80-af90-5a2b3e001f74.jpg',
     bio: 'Manages the publishing arm of FLC, ensuring the highest quality in educational books and guides for the medical fraternity.'
   }
 ];
@@ -137,6 +137,7 @@ const App: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
+  const [selectedBook, setSelectedBook] = useState<any | null>(null);
 
   // Form State
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
@@ -145,14 +146,22 @@ const App: React.FC = () => {
   // Handle keyboard navigation for modal
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (!selectedService) return;
-      if (e.key === 'ArrowLeft') navigateService('prev');
-      if (e.key === 'ArrowRight') navigateService('next');
-      if (e.key === 'Escape') setSelectedService(null);
+      if (!selectedService && !selectedBook && !selectedMember) return;
+      if (e.key === 'ArrowLeft') {
+         if (selectedService) navigateService('prev');
+      }
+      if (e.key === 'ArrowRight') {
+         if (selectedService) navigateService('next');
+      }
+      if (e.key === 'Escape') {
+          setSelectedService(null);
+          setSelectedMember(null);
+          setSelectedBook(null);
+      }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedService]);
+  }, [selectedService, selectedBook, selectedMember]);
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
@@ -530,10 +539,11 @@ const App: React.FC = () => {
                   whileHover={{ y: -20 }}
                   className={`relative p-8 md:p-8 border border-white/10 backdrop-blur-md flex flex-col min-h-[350px] transition-colors duration-300 ${item.accent} will-change-transform`}
                   data-hover="true"
+                  onClick={() => setSelectedBook(item)}
                 >
                   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                   
-                  <div className="flex-1">
+                  <div className="flex-1 pointer-events-none">
                     <div className="flex justify-between items-start mb-4">
                         <Book className="w-8 h-8 text-white/50" />
                         <span className="text-xs font-mono border border-white/20 px-2 py-1 rounded">{item.price}</span>
@@ -547,6 +557,7 @@ const App: React.FC = () => {
                   
                   <button 
                     className={`w-full py-3 text-xs font-bold uppercase tracking-[0.2em] border border-white/20 transition-all duration-300 mt-6 group overflow-hidden relative text-white cursor-pointer hover:bg-white hover:text-black`}
+                    onClick={(e) => { e.stopPropagation(); setSelectedBook(item); }}
                   >
                     <span className="relative z-10">
                       View Book
@@ -795,6 +806,65 @@ const App: React.FC = () => {
                  <div className="text-gray-300 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[50vh] pr-2 custom-scrollbar">
                    {selectedMember.fullBio || selectedMember.bio}
                  </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+       </AnimatePresence>
+
+       {/* Book Detail Modal */}
+       <AnimatePresence>
+        {selectedBook && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedBook(null)}
+            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/50 backdrop-blur-md cursor-auto"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-4xl bg-[#022c22] border border-white/10 overflow-hidden flex flex-col md:flex-row rounded-2xl shadow-2xl"
+            >
+               <button
+                onClick={() => setSelectedBook(null)}
+                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors"
+                data-hover="true"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="w-full md:w-1/2 h-96 md:h-auto relative bg-black/40 flex items-center justify-center p-8">
+                 <div className="relative w-full h-full max-w-[300px] shadow-2xl">
+                    <img 
+                      src={selectedBook.image} 
+                      alt={selectedBook.name} 
+                      className="w-full h-full object-cover rounded-lg shadow-[0_0_30px_rgba(0,0,0,0.5)]" 
+                    />
+                 </div>
+              </div>
+
+              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                 <div className="flex items-center gap-2 mb-4">
+                    <Book className="text-[#4ade80] w-5 h-5" />
+                    <span className="text-white/60 text-xs font-mono uppercase tracking-widest">{selectedBook.price}</span>
+                 </div>
+
+                 <h3 className="text-2xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">{selectedBook.name}</h3>
+                 <p className="text-[#4ade80] font-mono text-sm uppercase tracking-widest mb-6">By {selectedBook.author}</p>
+                 
+                 <div className="h-px w-10 bg-white/20 mb-6" />
+                 
+                 <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-8">
+                   {selectedBook.desc}
+                 </p>
+
+                 <button className="w-full py-4 border border-[#4ade80] text-[#4ade80] font-bold uppercase hover:bg-[#4ade80] hover:text-black transition-colors">
+                    Buy Now / Learn More
+                 </button>
               </div>
             </motion.div>
           </motion.div>
