@@ -6,12 +6,11 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Book, Globe, Zap, Users, MonitorPlay, Menu, X, Mic, Tv, ChevronLeft, ChevronRight, Newspaper, Clapperboard, Smartphone, HeartPulse, Target, Lightbulb, TrendingUp, Send, Check } from 'lucide-react';
+import { Book, Globe, Zap, Users, MonitorPlay, Menu, X, Mic, Tv, ChevronLeft, ChevronRight, Newspaper, Clapperboard, Smartphone, HeartPulse, Target, Lightbulb, TrendingUp, Send, Check, MessageSquare } from 'lucide-react';
 import FluidBackground from './components/FluidBackground';
 import GradientText from './components/GlitchText';
 import CustomCursor from './components/CustomCursor';
 import ServiceCard from './components/ArtistCard';
-import AIChat from './components/AIChat';
 import { ServiceItem, TeamMember } from './types';
 
 // Data from FLC Reference
@@ -66,7 +65,6 @@ const SERVICES: ServiceItem[] = [
   },
 ];
 
-// Updated Book List based on provided images
 const PUBLISHING_ITEMS = [
   { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop' },
   { name: 'Dr. Moneywise', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560eb3e?q=80&w=1000&auto=format&fit=crop' },
@@ -75,7 +73,7 @@ const PUBLISHING_ITEMS = [
   { name: 'Fintegrity', author: 'Keval Bhanushali', desc: 'Integrity in the world of finance.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=1000&auto=format&fit=crop' },
   { name: 'Credit Report Screwed Up?', author: 'Aparna Ramachandra', desc: 'Why is it screwed up and how to fix it.', price: 'Guide', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1554224154-260327c00c40?q=80&w=1000&auto=format&fit=crop' },
   { name: 'The Happy Rich Advisor', author: 'Amar Pandit', desc: 'Build the wealth management firm of the future.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop' },
-  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=1000&auto=format&fit=crop' },
+  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'Investing for Beginners - An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/investing_book_cover.jpg' },
 ];
 
 const TEAM_MEMBERS: TeamMember[] = [
@@ -83,7 +81,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '1',
     name: 'Anusha Ramani',
     role: 'Founder & CEO',
-    // Professional woman
     image: 'https://aicdn.picsart.com/56e1982a-2546-4911-994e-d5661968ad4e.jpg',
     bio: 'Visionary leader and strategist who founded FLC to bring rare, breakthrough ideas to healthcare and lifestyle media.'
   },
@@ -91,7 +88,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '2',
     name: 'Alok Dubey',
     role: 'Business Head',
-    // Professional man, glasses
     image: 'https://flcmediasolutions.netlify.app/src/WhatsApp%20Image%202025-09-22%20at%2010.32.25_0bc6801c.jpg',
     bio: 'I bring proven sales experience along with a solid media background, having successfully managed and executed diversified campaigns across TV, radio, digital, print, and on-ground events.',
     fullBio: 'I bring proven sales experience along with a solid media background, having successfully managed and executed diversified campaigns across TV, radio, digital, print, and on-ground events. Over the years, I have delivered integrated media solutions ranging from launch campaigns and brand activations to pocket songs, podcasts, and other innovative formats for multiple pharmaceutical companies and brands. My exposure to handling cross-platform campaigns has given me a strong understanding of market trends, client needs, and result-oriented execution. Academically, I hold a degree in Sales and Marketing from JK College, Ghansoli, Navi Mumbai, which has strengthened my foundation and complements my professional journey.'
@@ -100,7 +96,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '3',
     name: 'Pratik Tiwari',
     role: 'Innovative Technical Lead',
-    // Young man, casual/hoodie vibe
     image: 'https://aicdn.picsart.com/9eb9221e-e0ac-4595-a0c8-43050d8c0dcf.jpg',
     bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools.'
   },
@@ -108,7 +103,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '4',
     name: 'Maharishi Singh',
     role: 'Social Media Creator',
-    // Creative professional
     image: 'https://flcmediasolutions.netlify.app/src/Screenshot%202025-10-10%20125103.png',
     bio: 'Creative strategist behind FLC\'s social media presence, designing engaging campaigns, thematic rollouts & influencer collaborations.'
   },
@@ -116,7 +110,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '5',
     name: 'Vivek Dubey',
     role: 'Video Editor Intern',
-    // Young creative
     image: 'https://flcmediasolutions.netlify.app/src/WhatsApp%20Image%202025-09-22%20at%2015.12.40_5eda09c8.jpg',
     bio: 'A young, passionate creative mind assisting in editing, post-production, and design integration. Brings fresh energy to FLC\'s high-quality video outputs.'
   },
@@ -124,7 +117,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '6',
     name: 'Abrar Khan',
     role: 'Books Publisher',
-    // Professional man
     image: 'https://aicdn.picsart.com/52669918-815e-4a80-af90-5a2b3e001f74.jpg',
     bio: 'Manages the publishing arm of FLC, ensuring the highest quality in educational books and guides for the medical fraternity.'
   }
@@ -208,17 +200,14 @@ const App: React.FC = () => {
         setFormStatus('success');
         setContactForm({ name: '', email: '', message: '' });
 
-        // Reset status after delay
         setTimeout(() => {
           setFormStatus('idle');
         }, 5000);
       } else {
-        console.error("Formspree submission failed");
         setFormStatus('idle');
         alert("There was a problem sending your message. Please try again.");
       }
     } catch (error) {
-      console.error("Error submitting form", error);
       setFormStatus('idle');
       alert("There was a problem sending your message. Please try again.");
     }
@@ -228,31 +217,56 @@ const App: React.FC = () => {
     <div className="relative min-h-screen text-white selection:bg-[#4ade80] selection:text-black cursor-auto md:cursor-none overflow-x-hidden">
       <CustomCursor />
       <FluidBackground />
-      <AIChat />
+      
+      {/* Floating WhatsApp Button */}
+      <motion.a
+        href="https://wa.me/918097566779?text=Hi%20Four%20Leaf%20Clover,%20I'd%20like%20to%20learn%20more%20about%20your%20media%20solutions."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-[100] group flex items-center gap-3 pointer-events-auto"
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        whileHover={{ scale: 1.05 }}
+      >
+        <div className="hidden md:block bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+           <span className="text-xs font-bold uppercase tracking-widest text-white">Chat with us</span>
+        </div>
+        <div className="relative">
+          <motion.div 
+            className="absolute inset-0 bg-[#25D366] rounded-full opacity-30 blur-md"
+            animate={{ scale: [1, 1.4, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+          <div className="relative w-14 h-14 md:w-16 md:h-16 bg-[#25D366] rounded-full shadow-2xl flex items-center justify-center text-white">
+            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" strokeWidth="0" fill="currentColor" className="w-8 h-8 md:w-10 md:h-10">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </div>
+        </div>
+      </motion.a>
       
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-8 py-6 mix-blend-difference">
+      <nav className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 md:px-8 py-4 bg-transparent">
         {/* Logo Section */}
-        <div className="flex items-center gap-3 z-50 cursor-default">
-           {/* Placeholder for real logo image */}
-           {/* <img src="/logo.png" alt="FLC Logo" className="w-10 h-10 object-contain" /> */}
-           <div className="flex flex-col leading-none font-heading font-bold tracking-tighter text-white">
-              <span className="text-xl md:text-2xl">FOUR LEAF</span>
-              <div className="flex items-center gap-1">
-                 <span className="text-xl md:text-2xl">CL</span>
-                 <span className="text-[#4ade80] text-xl md:text-2xl animate-spin-slow">☘</span>
-                 <span className="text-xl md:text-2xl">VER</span>
-              </div>
+        <div className="flex items-center gap-4 z-50 cursor-default">
+           <img 
+             src="https://aicdn.picsart.com/75671826-a8f3-4b2e-bc58-f080036614d2.png" 
+             alt="Four Leaf Clover Logo" 
+             className="w-20 h-20 md:w-32 md:h-32 object-contain filter-none"
+           />
+           <div className="flex flex-col leading-none font-heading font-bold tracking-tighter text-white drop-shadow-md">
+              <span className="text-xl md:text-2xl"></span>
+              <span className="text-xl md:text-2xl"></span>
            </div>
         </div>
         
         {/* Desktop Menu */}
-        <div className="hidden md:flex gap-10 text-sm font-bold tracking-widest uppercase">
+        <div className="hidden md:flex gap-10 text-sm font-bold tracking-widest uppercase text-white drop-shadow-sm">
           {['Services', 'About', 'Publishing'].map((item) => (
             <button 
               key={item} 
               onClick={() => scrollToSection(item.toLowerCase())}
-              className="hover:text-[#4ade80] transition-colors text-white cursor-pointer bg-transparent border-none"
+              className="hover:text-[#4ade80] transition-colors cursor-pointer bg-transparent border-none"
               data-hover="true"
             >
               {item}
@@ -261,7 +275,7 @@ const App: React.FC = () => {
         </div>
         <button 
           onClick={() => scrollToSection('contact')}
-          className="hidden md:inline-block border border-white px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 text-white cursor-pointer bg-transparent"
+          className="hidden md:inline-block border border-white px-8 py-3 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300 text-white cursor-pointer bg-transparent shadow-lg backdrop-blur-sm"
           data-hover="true"
         >
           Contact Us
@@ -310,7 +324,6 @@ const App: React.FC = () => {
           style={{ y, opacity }}
           className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-24 md:pb-20"
         >
-           {/* Tagline Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -322,7 +335,6 @@ const App: React.FC = () => {
             <span>Healthcare</span>
           </motion.div>
 
-          {/* Main Title */}
           <div className="relative w-full flex flex-col justify-center items-center">
              <h1 className="text-[12vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center font-heading">
                 FOUR LEAF
@@ -332,7 +344,6 @@ const App: React.FC = () => {
               as="h1" 
               className="text-[12vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center" 
             />
-            {/* Optimized Orb */}
             <motion.div 
                className="absolute -z-20 w-[50vw] h-[50vw] bg-emerald-500/10 blur-[40px] rounded-full pointer-events-none will-change-transform"
                animate={{ scale: [0.8, 1.2, 0.8], opacity: [0.3, 0.6, 0.3] }}
@@ -366,7 +377,6 @@ const App: React.FC = () => {
           </motion.p>
         </motion.div>
 
-        {/* MARQUEE */}
         <div className="absolute bottom-12 md:bottom-16 left-0 w-full py-4 md:py-6 bg-white text-black z-20 overflow-hidden border-y-4 border-[#064e3b] shadow-[0_0_40px_rgba(16,185,129,0.2)]">
           <motion.div 
             className="flex w-fit will-change-transform"
@@ -405,16 +415,12 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* ABOUT SECTION (Story, Mission, Team) */}
+      {/* ABOUT SECTION */}
       <section id="about" className="relative z-10 py-20 md:py-32 bg-black/20 backdrop-blur-sm border-t border-white/10 overflow-hidden">
-        {/* Decorative blurred circle */}
         <div className="absolute top-1/2 right-[-20%] w-[50vw] h-[50vw] bg-[#10b981]/20 rounded-full blur-[40px] pointer-events-none will-change-transform" style={{ transform: 'translateZ(0)' }} />
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
-          
-          {/* Intro Grid: Story & Mission */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-            {/* The Story */}
             <div>
               <div className="flex items-center gap-2 mb-6">
                 <span className="text-[#4ade80] text-xl">♣</span>
@@ -430,7 +436,6 @@ const App: React.FC = () => {
               </p>
             </div>
 
-            {/* Mission & Vision */}
             <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md">
                <div className="flex items-center gap-2 mb-6">
                 <Target className="text-[#10b981] w-6 h-6" />
@@ -452,7 +457,6 @@ const App: React.FC = () => {
             </div>
           </div>
 
-          {/* Why Choose Us */}
           <div className="mb-32">
              <div className="text-center mb-16">
                <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">Why Choose Us?</h2>
@@ -474,7 +478,6 @@ const App: React.FC = () => {
              </div>
           </div>
 
-          {/* Meet The Team */}
           <div>
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                <div>
@@ -516,7 +519,6 @@ const App: React.FC = () => {
                ))}
             </div>
           </div>
-
         </div>
       </section>
 
@@ -537,7 +539,7 @@ const App: React.FC = () => {
                 <motion.div
                   key={i}
                   whileHover={{ y: -20 }}
-                  className={`relative p-8 md:p-8 border border-white/10 backdrop-blur-md flex flex-col min-h-[350px] transition-colors duration-300 ${item.accent} will-change-transform`}
+                  className={`relative p-8 md:p-8 border border-white/10 backdrop-blur-md flex flex-col min-h-[350px] transition-colors duration-300 ${item.accent} will-change-transform cursor-pointer`}
                   data-hover="true"
                   onClick={() => setSelectedBook(item)}
                 >
@@ -573,14 +575,12 @@ const App: React.FC = () => {
       {/* CONTACT SECTION */}
       <section id="contact" className="relative z-10 py-20 md:py-32 px-4 md:px-6">
         <div className="max-w-4xl mx-auto">
-          
           <div className="text-center mb-16">
              <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">Contact <span className="text-[#4ade80]">Us</span></h2>
              <p className="text-gray-400 max-w-lg mx-auto">Ready to start your breakthrough campaign? Reach out to the Four Leaf Clover team today.</p>
           </div>
 
           <div className="bg-white/5 border border-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
-             {/* Decorative blob */}
              <div className="absolute top-[-50%] right-[-10%] w-[500px] h-[500px] bg-[#10b981]/10 rounded-full blur-[80px] pointer-events-none" />
 
              <form onSubmit={handleContactSubmit} className="relative z-10 space-y-8">
@@ -685,7 +685,6 @@ const App: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-5xl bg-[#022c22] border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-[#10b981]/10 group/modal"
             >
-              {/* Close Button */}
               <button
                 onClick={() => setSelectedService(null)}
                 className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors"
@@ -694,7 +693,6 @@ const App: React.FC = () => {
                 <X className="w-6 h-6" />
               </button>
 
-              {/* Navigation Buttons */}
               <button
                 onClick={(e) => { e.stopPropagation(); navigateService('prev'); }}
                 className="absolute left-4 bottom-4 translate-y-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2 z-20 p-3 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors border border-white/10 backdrop-blur-sm"
@@ -711,7 +709,6 @@ const App: React.FC = () => {
                 <ChevronRight className="w-6 h-6" />
               </button>
 
-              {/* Image Side */}
               <div className="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img 
@@ -728,7 +725,6 @@ const App: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#022c22] via-transparent to-transparent md:bg-gradient-to-r" />
               </div>
 
-              {/* Content Side */}
               <div className="w-full md:w-1/2 p-8 pb-24 md:p-12 flex flex-col justify-center relative">
                 <motion.div
                   key={selectedService.id}
@@ -838,11 +834,11 @@ const App: React.FC = () => {
               </button>
 
               <div className="w-full md:w-1/2 h-96 md:h-auto relative bg-black/40 flex items-center justify-center p-8">
-                 <div className="relative w-full h-full max-w-[300px] shadow-2xl">
+                 <div className="relative w-full h-full max-w-[320px] shadow-2xl">
                     <img 
                       src={selectedBook.image} 
                       alt={selectedBook.name} 
-                      className="w-full h-full object-cover rounded-lg shadow-[0_0_30px_rgba(0,0,0,0.5)]" 
+                      className="w-full h-full object-cover rounded-lg shadow-[0_0_30px_rgba(0,0,0,0.5)] border border-white/10" 
                     />
                  </div>
               </div>
@@ -870,7 +866,6 @@ const App: React.FC = () => {
           </motion.div>
         )}
        </AnimatePresence>
-
     </div>
   );
 };
