@@ -66,14 +66,14 @@ const SERVICES: ServiceItem[] = [
 ];
 
 const PUBLISHING_ITEMS = [
-  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Dr. Moneywise', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1579621970563-ebec7560eb3e?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'The Personal Finance Book', author: 'Amar Pandit', desc: 'The ultimate financial guide for Doctors.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1565514020176-dbf2277cc165?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Immunize Your Financial Health', author: 'Amit Trivedi et al.', desc: '#Pandemic #Corona special edition.', price: 'Guide', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1584697964405-b9171766c3a2?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Fintegrity', author: 'Keval Bhanushali', desc: 'Integrity in the world of finance.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://images.unsplash.com/photo-1611974765270-ca12586343bb?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'Credit Report Screwed Up?', author: 'Aparna Ramachandra', desc: 'Why is it screwed up and how to fix it.', price: 'Guide', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://images.unsplash.com/photo-1554224154-260327c00c40?q=80&w=1000&auto=format&fit=crop' },
-  { name: 'The Happy Rich Advisor', author: 'Amar Pandit', desc: 'Build the wealth management firm of the future.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop' },
-  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'Investing for Beginners - An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/investing_book_cover.jpg' },
+  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://aicdn.picsart.com/de7ac979-b564-4376-9ca5-18b77e45c953.jpg' },
+  { name: 'Moneywise: Women & Finance', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0003.jpg' },
+  { name: 'The Personal Finance Book for Doctors', author: 'Amar Pandit', desc: 'The ultimate financial guide for Doctors.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0005.jpg' },
+  { name: 'Doctors Immunize Your Financial Health', author: 'Amit Trivedi et al.', desc: '#Pandemic #Corona special edition.', price: 'Guide', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0006.jpg' },
+  { name: 'Fintegrity', author: 'Keval Bhanushali', desc: 'Integrity in the world of finance.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0007.jpg' },
+  { name: 'Why Is My Credit Report Screwed Up?', author: 'Aparna Ramachandra', desc: 'Why is it screwed up and how to fix it.', price: 'Guide', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0008.jpg' },
+  { name: 'The Happy Rich Advisor', author: 'Amar Pandit', desc: 'Build the wealth management firm of the future.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0009.jpg' },
+  { name: "Doc, Who's Prescribing Your Investments?", author: 'Shweta Jain', desc: 'Investing for Beginners - An easy-to-follow guide for individuals taking their first step into investments.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0004.jpg' },
 ];
 
 const TEAM_MEMBERS: TeamMember[] = [
@@ -100,13 +100,6 @@ const TEAM_MEMBERS: TeamMember[] = [
     bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools.'
   },
   {
-    id: '4',
-    name: 'Maharishi Singh',
-    role: 'Social Media Creator',
-    image: 'https://flcmediasolutions.netlify.app/src/Screenshot%202025-10-10%20125103.png',
-    bio: 'Creative strategist behind FLC\'s social media presence, designing engaging campaigns, thematic rollouts & influencer collaborations.'
-  },
-  {
     id: '5',
     name: 'Vivek Dubey',
     role: 'Video Editor Intern',
@@ -120,6 +113,17 @@ const TEAM_MEMBERS: TeamMember[] = [
     image: 'https://aicdn.picsart.com/52669918-815e-4a80-af90-5a2b3e001f74.jpg',
     bio: 'Manages the publishing arm of FLC, ensuring the highest quality in educational books and guides for the medical fraternity.'
   }
+];
+
+const PARTNERS = [
+  { name: 'IPCA', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu6Qga8rAupjqOCrpPeRWBlBf2lX0AAblLyg&s' },
+  { name: 'Alembic', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzTKpce6EVMgVuPklFSlotjlQxiACqyTYvRg&s'},
+  { name: 'Sun Pharma', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSklQa8vlBXk8yxc5G1Vl7VZCn4xiAoSOXG6A&s' },
+  { name: 'Cadila', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9x3nIFcFw77RpW4Jvutkhe9pphU2m9Zbikg&s'},
+  { name: 'Lupin', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfY7CCfGf5n_Pz6KrFiSRbYAF7N89E1J0_OA&s' },
+  { name: 'Cipla', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScdAyBxRdXFygR9vAo1lmFPxBu8T2i8POW5w&s' },
+  { name: 'Glenmark', image: 'https://logowik.com/content/uploads/images/glenmark-pharmaceuticals4908.jpg' },
+  { name: 'Intas', image: 'https://aksharqhse.in/wp-content/uploads/2021/03/Intas1.png' },
 ];
 
 const App: React.FC = () => {
@@ -220,7 +224,7 @@ const App: React.FC = () => {
       
       {/* Floating WhatsApp Button */}
       <motion.a
-        href="https://wa.me/918097566779?text=Hi%20Four%20Leaf%20Clover,%20I'd%20like%20to%20learn%20more%20about%20your%20media%20solutions."
+        href="https://wa.me/+919820432504?text=Hi%20Four%20Leaf%20Clover,%20I'd%20like%20to%20learn%20more%20about%20your%20media%20solutions."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-[100] group flex items-center gap-3 pointer-events-auto"
@@ -255,8 +259,8 @@ const App: React.FC = () => {
              className="w-20 h-20 md:w-32 md:h-32 object-contain filter-none"
            />
            <div className="flex flex-col leading-none font-heading font-bold tracking-tighter text-white drop-shadow-md">
-              <span className="text-xl md:text-2xl"></span>
-              <span className="text-xl md:text-2xl"></span>
+              <span className="text-xl md:text-2xl">FOUR LEAF</span>
+              <span className="text-xl md:text-2xl">CLOVER</span>
            </div>
         </div>
         
@@ -567,6 +571,41 @@ const App: React.FC = () => {
                     <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out -z-0" />
                   </button>
                 </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PARTNERS SECTION */}
+      <section id="partners" className="relative z-10 py-20 md:py-32 px-4 md:px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 md:mb-24">
+             <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">Our <span className="text-[#4ade80]">Partners</span></h2>
+             <p className="text-gray-400 max-w-lg mx-auto uppercase font-mono tracking-widest text-xs md:text-sm">Trusted by leading pharmaceutical brands</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-8">
+            {PARTNERS.map((partner, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-center backdrop-blur-sm overflow-hidden min-h-[140px] md:min-h-[180px] hover:border-[#4ade80]/40 transition-colors"
+              >
+                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                 
+                 <div className="relative w-full h-full flex items-center justify-center bg-white/10 rounded-xl p-4 md:p-6 group-hover:bg-white transition-all duration-500">
+                    <img 
+                      src={partner.image} 
+                      alt={`${partner.name} logo`} 
+                      className="max-w-full max-h-[60px] md:max-h-[80px] object-contain transition-all duration-500 filter brightness-200 group-hover:brightness-100"
+                    />
+                 </div>
+                 
+                 <div className="absolute bottom-0 left-0 w-full h-1 bg-[#10b981] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              </motion.div>
             ))}
           </div>
         </div>
