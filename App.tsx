@@ -259,8 +259,8 @@ const App: React.FC = () => {
              className="w-20 h-20 md:w-32 md:h-32 object-contain filter-none"
            />
            <div className="flex flex-col leading-none font-heading font-bold tracking-tighter text-white drop-shadow-md">
-              <span className="text-xl md:text-2xl">FOUR LEAF</span>
-              <span className="text-xl md:text-2xl">CLOVER</span>
+              <span className="text-xl md:text-2xl"></span>
+              <span className="text-xl md:text-2xl"></span>
            </div>
         </div>
         
