@@ -6,11 +6,13 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { Book, Globe, Zap, Users, MonitorPlay, Menu, X, Mic, Tv, ChevronLeft, ChevronRight, Newspaper, Clapperboard, Smartphone, HeartPulse, Target, Lightbulb, TrendingUp, Send, Check, MessageSquare } from 'lucide-react';
+import { Home, User, Briefcase, Book, Globe, Zap, Users, MonitorPlay, Menu, X, Mic, Tv, ChevronLeft, ChevronRight, Newspaper, Clapperboard, Smartphone, HeartPulse, Target, Lightbulb, TrendingUp, Send, Check, MessageSquare } from 'lucide-react';
 import FluidBackground from './components/FluidBackground';
 import GradientText from './components/GlitchText';
 import CustomCursor from './components/CustomCursor';
 import ServiceCard from './components/ArtistCard';
+import { LogoCloud } from './components/ui/logo-cloud-3';
+import { GLSLHills } from './components/ui/glsl-hills';
 import { ServiceItem, TeamMember } from './types';
 
 // Data from FLC Reference
@@ -323,7 +325,16 @@ const App: React.FC = () => {
       </AnimatePresence>
 
       {/* HERO SECTION */}
-      <header className="relative h-[100svh] min-h-[600px] flex flex-col items-center justify-center overflow-hidden px-4">
+      <header className="relative h-[120svh] min-h-[800px] flex flex-col items-center justify-center overflow-hidden px-4">
+        <div className="absolute inset-0 z-0">
+          <GLSLHills 
+            width="100%" 
+            height="100%" 
+            cameraZ={150} 
+            speed={0.3} 
+            className="opacity-40"
+          />
+        </div>
         <motion.div 
           style={{ y, opacity }}
           className="z-10 text-center flex flex-col items-center w-full max-w-6xl pb-24 md:pb-20"
@@ -332,7 +343,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="flex items-center gap-3 md:gap-6 text-xs md:text-base font-mono text-[#4ade80] tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm"
+            className="flex items-center gap-3 md:gap-6 text-[10px] md:text-base font-mono text-[#4ade80] tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 bg-black/20 px-4 py-2 rounded-full backdrop-blur-sm"
           >
             <span>Media Solutions</span>
             <span className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#10b981] rounded-full animate-pulse"/>
@@ -340,16 +351,16 @@ const App: React.FC = () => {
           </motion.div>
 
           <div className="relative w-full flex flex-col justify-center items-center">
-             <h1 className="text-[12vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center font-heading">
+             <h1 className="text-[14vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center font-heading">
                 FOUR LEAF
              </h1>
             <GradientText 
               text="CLOVER" 
               as="h1" 
-              className="text-[12vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center" 
+              className="text-[14vw] md:text-[10vw] leading-[0.9] font-black tracking-tighter text-center" 
             />
             <motion.div 
-               className="absolute -z-20 w-[50vw] h-[50vw] bg-emerald-500/10 blur-[40px] rounded-full pointer-events-none will-change-transform"
+               className="absolute -z-20 w-[60vw] h-[60vw] bg-emerald-500/10 blur-[40px] rounded-full pointer-events-none will-change-transform"
                animate={{ scale: [0.8, 1.2, 0.8], opacity: [0.3, 0.6, 0.3] }}
                transition={{ duration: 6, repeat: Infinity }}
                style={{ transform: 'translateZ(0)' }}
@@ -367,7 +378,7 @@ const App: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
-            className="text-lg md:text-2xl font-light max-w-2xl mx-auto text-white/90 leading-relaxed drop-shadow-lg px-4"
+            className="text-base md:text-2xl font-light max-w-2xl mx-auto text-white/90 leading-relaxed drop-shadow-lg px-4"
           >
             Educate. Empower. Engage.
           </motion.p>
@@ -375,7 +386,7 @@ const App: React.FC = () => {
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              transition={{ delay: 1, duration: 1 }}
-             className="text-sm md:text-base text-gray-400 mt-2 max-w-lg"
+             className="text-xs md:text-base text-gray-400 mt-2 max-w-lg"
           >
             Creating breakthrough patient education campaigns that deliver measurable impact.
           </motion.p>
@@ -401,21 +412,67 @@ const App: React.FC = () => {
         </div>
       </header>
 
+      {/* NEW DEMO SECTION */}
+      <section className="relative py-32 flex flex-col items-center justify-center overflow-hidden px-4 bg-black/20">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
+          <GLSLHills 
+            width="100%" 
+            height="100%" 
+            cameraZ={100} 
+            speed={0.2} 
+          />
+        </div>
+        <div className="relative z-10 text-center max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="space-y-8"
+          >
+            <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">
+              <span className="italic font-thin text-3xl md:text-6xl block mb-2 text-emerald-400">Designs That Speak</span>
+              Louder Than Words
+            </h2>
+            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
+              We craft stunning visuals and user-friendly experiences that help your brand stand out and connect with your audience.
+            </p>
+            <div className="flex justify-center gap-4 pt-4">
+              <div className="w-12 h-1 bg-emerald-500 rounded-full" />
+              <div className="w-12 h-1 bg-emerald-500/30 rounded-full" />
+              <div className="w-12 h-1 bg-emerald-500/10 rounded-full" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* SERVICES SECTION */}
       <section id="services" className="relative z-10 py-20 md:py-32">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 px-4">
-             <h2 className="text-5xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-lg break-words w-full md:w-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-16 px-4"
+          >
+             <h2 className="text-4xl md:text-8xl font-heading font-bold uppercase leading-[0.9] drop-shadow-lg break-words w-full md:w-auto">
               Our <br/> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-[#10b981]">Solutions</span>
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10 bg-black/20 backdrop-blur-sm">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-white/10 bg-black/20 backdrop-blur-sm"
+          >
             {SERVICES.map((service) => (
               <ServiceCard key={service.id} service={service} onClick={() => setSelectedService(service)} />
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -425,47 +482,63 @@ const App: React.FC = () => {
 
         <div className="max-w-7xl mx-auto px-4 md:px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
               <div className="flex items-center gap-2 mb-6">
                 <span className="text-[#4ade80] text-xl">♣</span>
                 <h3 className="font-heading text-2xl font-bold tracking-widest text-white">The Story</h3>
               </div>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 leading-tight">
                 Rarity in <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-[#10b981]">Every Idea</span>
               </h2>
-              <p className="text-lg text-gray-300 leading-relaxed font-light">
+              <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
                 The name comes from the rare four-leaf clover — symbolizing rarity and breakthrough creative ideas in media.
                 <br/><br/>
                 As the Irish legend goes, finding a four-leaf clover is a rare occurrence. For every 10,000 three-leaf clovers, there is only one four-leaf clover. This scarcity and uniqueness perfectly align with our mission. We are the "four leaf clover" in the media ideas business—a rare find for your marketing efforts.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md">
+            <motion.div 
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md"
+            >
                <div className="flex items-center gap-2 mb-6">
                 <Target className="text-[#10b981] w-6 h-6" />
                 <h3 className="font-heading text-xl font-bold tracking-widest text-white">Mission & Vision</h3>
               </div>
-              <p className="text-xl md:text-2xl text-white font-medium mb-8 leading-relaxed">
+              <p className="text-lg md:text-2xl text-white font-medium mb-8 leading-relaxed">
                 "To Educate, Empower, and Engage through meaningful and lasting communication in healthcare."
               </p>
               <div className="space-y-4">
                  <p className="text-gray-400 text-sm md:text-base">
                    We aim to build campaigns that not only inform but also create meaningful, lasting connections with audiences, helping our clients achieve their marketing goals with creativity and compliance.
                  </p>
-                 <div className="flex gap-2">
-                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-xs font-mono rounded-full border border-[#10b981]/30">Impactful</span>
-                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-xs font-mono rounded-full border border-[#10b981]/30">Accessible</span>
-                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-xs font-mono rounded-full border border-[#10b981]/30">Clear</span>
+                 <div className="flex gap-2 flex-wrap">
+                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-[10px] md:text-xs font-mono rounded-full border border-[#10b981]/30">Impactful</span>
+                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-[10px] md:text-xs font-mono rounded-full border border-[#10b981]/30">Accessible</span>
+                    <span className="px-3 py-1 bg-[#10b981]/20 text-[#4ade80] text-[10px] md:text-xs font-mono rounded-full border border-[#10b981]/30">Clear</span>
                  </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="mb-32">
-             <div className="text-center mb-16">
-               <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">Why Choose Us?</h2>
+             <motion.div 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-center mb-16"
+             >
+               <h2 className="text-3xl md:text-6xl font-heading font-bold mb-4">Why Choose Us?</h2>
                <div className="w-24 h-1 bg-[#4ade80] mx-auto" />
-             </div>
+             </motion.div>
              
              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
@@ -473,21 +546,32 @@ const App: React.FC = () => {
                   { icon: Lightbulb, title: 'Breakthrough Ideas', desc: 'Tuned to find exciting, breakthrough ideas that stand out.' },
                   { icon: TrendingUp, title: 'Measurable Results', desc: 'Campaigns designed to deliver real, tracking outcomes.' },
                 ].map((item, i) => (
-                  <div key={i} className="group p-8 border border-white/10 bg-black/40 hover:bg-[#10b981]/10 transition-all duration-300">
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="group p-8 border border-white/10 bg-black/40 hover:bg-[#10b981]/10 transition-all duration-300"
+                  >
                      <item.icon className="w-10 h-10 text-[#4ade80] mb-6 group-hover:scale-110 transition-transform" />
                      <h4 className="text-xl font-bold font-heading mb-4">{item.title}</h4>
-                     <p className="text-gray-400 leading-relaxed">{item.desc}</p>
-                  </div>
+                     <p className="text-gray-400 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                  </motion.div>
                 ))}
              </div>
           </div>
 
           <div>
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-               <div>
-                  <h2 className="text-5xl md:text-7xl font-heading font-bold mb-4">Meet <br/><span className="text-[#4ade80]">Our Team</span></h2>
-                  <p className="text-gray-400 max-w-lg">Creative thinkers, healthcare storytellers, and media innovators – the people behind Four Leaf Clover.</p>
-               </div>
+               <motion.div
+                 initial={{ opacity: 0, x: -20 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 viewport={{ once: true }}
+               >
+                  <h2 className="text-4xl md:text-7xl font-heading font-bold mb-4">Meet <br/><span className="text-[#4ade80]">Our Team</span></h2>
+                  <p className="text-gray-400 max-w-lg text-sm md:text-base">Creative thinkers, healthcare storytellers, and media innovators – the people behind Four Leaf Clover.</p>
+               </motion.div>
                <div className="hidden md:block">
                   <div className="text-right">
                      <div className="text-3xl font-bold text-white">5+</div>
@@ -497,9 +581,13 @@ const App: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-               {TEAM_MEMBERS.map((member) => (
+               {TEAM_MEMBERS.map((member, i) => (
                  <motion.div 
                     key={member.id}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
                     whileHover={{ y: -10 }}
                     className="group relative bg-white/5 border border-white/10 overflow-hidden cursor-pointer"
                     onClick={() => setSelectedMember(member)}
@@ -510,9 +598,9 @@ const App: React.FC = () => {
                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
                     </div>
                     <div className="absolute bottom-0 left-0 w-full p-6">
-                       <p className="text-[#4ade80] font-mono text-xs uppercase tracking-widest mb-1">{member.role}</p>
-                       <h3 className="text-2xl font-bold font-heading text-white mb-2">{member.name}</h3>
-                       <p className="text-gray-300 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                       <p className="text-[#4ade80] font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">{member.role}</p>
+                       <h3 className="text-xl md:text-2xl font-bold font-heading text-white mb-2">{member.name}</h3>
+                       <p className="text-gray-300 text-xs md:text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
                          {member.bio}
                        </p>
                     </div>
@@ -577,36 +665,42 @@ const App: React.FC = () => {
       </section>
 
       {/* PARTNERS SECTION */}
-      <section id="partners" className="relative z-10 py-20 md:py-32 px-4 md:px-6">
+      <section id="partners" className="relative z-10 py-20 md:py-32 px-4 md:px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 md:mb-24">
-             <h2 className="text-4xl md:text-6xl font-heading font-bold mb-4">Our <span className="text-[#4ade80]">Partners</span></h2>
-             <p className="text-gray-400 max-w-lg mx-auto uppercase font-mono tracking-widest text-xs md:text-sm">Trusted by leading pharmaceutical brands</p>
+          <div className="text-center mb-12 md:mb-16">
+             <motion.h2 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               className="text-4xl md:text-6xl font-heading font-bold mb-4"
+             >
+               Our <span className="text-[#4ade80]">Partners</span>
+             </motion.h2>
+             <motion.p 
+               initial={{ opacity: 0, y: 20 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               viewport={{ once: true }}
+               transition={{ delay: 0.2 }}
+               className="text-gray-400 max-w-lg mx-auto uppercase font-mono tracking-widest text-xs md:text-sm"
+             >
+               Trusted by leading pharmaceutical brands
+             </motion.p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-8">
-            {PARTNERS.map((partner, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 flex items-center justify-center backdrop-blur-sm overflow-hidden min-h-[140px] md:min-h-[180px] hover:border-[#4ade80]/40 transition-colors"
-              >
-                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                 
-                 <div className="relative w-full h-full flex items-center justify-center bg-white/10 rounded-xl p-4 md:p-6 group-hover:bg-white transition-all duration-500">
-                    <img 
-                      src={partner.image} 
-                      alt={`${partner.name} logo`} 
-                      className="max-w-full max-h-[60px] md:max-h-[80px] object-contain transition-all duration-500 filter brightness-200 group-hover:brightness-100"
-                    />
-                 </div>
-                 
-                 <div className="absolute bottom-0 left-0 w-full h-1 bg-[#10b981] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
-              </motion.div>
-            ))}
+          <div className="relative">
+            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#022c22] to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#022c22] to-transparent z-10 pointer-events-none" />
+            
+            <LogoCloud 
+              logos={PARTNERS.map(p => ({ src: p.image, alt: p.name }))} 
+              className="py-12"
+            />
+          </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-4 md:gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+             {PARTNERS.map((partner, i) => (
+               <span key={i} className="text-[10px] md:text-xs font-mono uppercase tracking-[0.3em] text-white/40">{partner.name}</span>
+             ))}
           </div>
         </div>
       </section>
@@ -715,18 +809,18 @@ const App: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedService(null)}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/50 backdrop-blur-md cursor-auto"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-md cursor-auto"
           >
             <motion.div
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-5xl bg-[#022c22] border border-white/10 overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-[#10b981]/10 group/modal"
+              className="relative w-full max-w-5xl max-h-[95vh] md:max-h-none bg-[#022c22] border border-white/10 overflow-y-auto md:overflow-hidden flex flex-col md:flex-row shadow-2xl shadow-[#10b981]/10 group/modal rounded-2xl md:rounded-none"
             >
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-4 right-4 z-20 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors"
+                className="absolute top-4 right-4 z-30 p-2 rounded-full bg-black/50 text-white hover:bg-white hover:text-black transition-colors"
                 data-hover="true"
               >
                 <X className="w-6 h-6" />
@@ -748,7 +842,7 @@ const App: React.FC = () => {
                 <ChevronRight className="w-6 h-6" />
               </button>
 
-              <div className="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+              <div className="w-full md:w-1/2 h-64 md:h-auto relative overflow-hidden shrink-0">
                 <AnimatePresence mode="wait">
                   <motion.img 
                     key={selectedService.id}
@@ -764,7 +858,7 @@ const App: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#022c22] via-transparent to-transparent md:bg-gradient-to-r" />
               </div>
 
-              <div className="w-full md:w-1/2 p-8 pb-24 md:p-12 flex flex-col justify-center relative">
+              <div className="w-full md:w-1/2 p-6 md:p-12 pb-24 md:pb-12 flex flex-col justify-center relative">
                 <motion.div
                   key={selectedService.id}
                   initial={{ opacity: 0, x: 20 }}
@@ -773,25 +867,25 @@ const App: React.FC = () => {
                 >
                   <div className="flex items-center gap-3 text-[#10b981] mb-4">
                      <MonitorPlay className="w-4 h-4" />
-                     <span className="font-mono text-sm tracking-widest uppercase">{selectedService.tag}</span>
+                     <span className="font-mono text-xs md:text-sm tracking-widest uppercase">{selectedService.tag}</span>
                   </div>
                   
-                  <h3 className="text-3xl md:text-5xl font-heading font-bold uppercase leading-none mb-2 text-white">
+                  <h3 className="text-2xl md:text-5xl font-heading font-bold uppercase leading-tight mb-2 text-white">
                     {selectedService.name}
                   </h3>
                   
-                  <p className="text-lg text-[#4ade80] font-medium tracking-widest uppercase mb-6">
+                  <p className="text-sm md:text-lg text-[#4ade80] font-medium tracking-widest uppercase mb-6">
                     {selectedService.category}
                   </p>
                   
                   <div className="h-px w-20 bg-white/20 mb-6" />
                   
-                  <p className="text-gray-300 leading-relaxed text-lg font-light mb-8">
+                  <p className="text-gray-300 leading-relaxed text-base md:text-lg font-light mb-8">
                     {selectedService.description}
                   </p>
 
                   <div className="flex gap-4">
-                     <button className="px-6 py-2 border border-[#4ade80] text-[#4ade80] text-sm font-bold uppercase hover:bg-[#4ade80] hover:text-black transition-colors">
+                     <button className="px-6 py-2 border border-[#4ade80] text-[#4ade80] text-xs md:text-sm font-bold uppercase hover:bg-[#4ade80] hover:text-black transition-colors">
                         Get Details
                      </button>
                   </div>
@@ -810,14 +904,14 @@ const App: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedMember(null)}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/50 backdrop-blur-md cursor-auto"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-md cursor-auto"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-3xl bg-[#022c22] border border-white/10 overflow-hidden flex flex-col md:flex-row rounded-2xl shadow-2xl"
+              className="relative w-full max-w-3xl max-h-[90vh] bg-[#022c22] border border-white/10 overflow-y-auto md:overflow-hidden flex flex-col md:flex-row rounded-2xl shadow-2xl"
             >
                <button
                 onClick={() => setSelectedMember(null)}
@@ -827,18 +921,18 @@ const App: React.FC = () => {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-full md:w-2/5 h-64 md:h-auto relative">
+              <div className="w-full md:w-2/5 h-64 md:h-auto relative shrink-0">
                 <img src={selectedMember.image} alt={selectedMember.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#022c22] to-transparent md:hidden" />
               </div>
 
-              <div className="w-full md:w-3/5 p-8 flex flex-col justify-center">
-                 <h3 className="text-3xl font-heading font-bold text-white mb-1">{selectedMember.name}</h3>
-                 <p className="text-[#4ade80] font-mono text-sm uppercase tracking-widest mb-6">{selectedMember.role}</p>
+              <div className="w-full md:w-3/5 p-6 md:p-8 flex flex-col justify-center">
+                 <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-1">{selectedMember.name}</h3>
+                 <p className="text-[#4ade80] font-mono text-xs md:text-sm uppercase tracking-widest mb-6">{selectedMember.role}</p>
                  
                  <div className="h-px w-10 bg-white/20 mb-6" />
                  
-                 <div className="text-gray-300 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[50vh] pr-2 custom-scrollbar">
+                 <div className="text-gray-300 leading-relaxed text-sm md:text-base overflow-y-auto max-h-[40vh] md:max-h-[50vh] pr-2 custom-scrollbar">
                    {selectedMember.fullBio || selectedMember.bio}
                  </div>
               </div>
@@ -855,14 +949,14 @@ const App: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedBook(null)}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-4 bg-black/50 backdrop-blur-md cursor-auto"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-2 md:p-4 bg-black/80 backdrop-blur-md cursor-auto"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-4xl bg-[#022c22] border border-white/10 overflow-hidden flex flex-col md:flex-row rounded-2xl shadow-2xl"
+              className="relative w-full max-w-4xl max-h-[90vh] bg-[#022c22] border border-white/10 overflow-y-auto md:overflow-hidden flex flex-col md:flex-row rounded-2xl shadow-2xl"
             >
                <button
                 onClick={() => setSelectedBook(null)}
@@ -872,8 +966,8 @@ const App: React.FC = () => {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="w-full md:w-1/2 h-96 md:h-auto relative bg-black/40 flex items-center justify-center p-8">
-                 <div className="relative w-full h-full max-w-[320px] shadow-2xl">
+              <div className="w-full md:w-1/2 h-80 md:h-auto relative bg-black/40 flex items-center justify-center p-6 md:p-8 shrink-0">
+                 <div className="relative w-full h-full max-w-[280px] md:max-w-[320px] shadow-2xl">
                     <img 
                       src={selectedBook.image} 
                       alt={selectedBook.name} 
@@ -882,22 +976,22 @@ const App: React.FC = () => {
                  </div>
               </div>
 
-              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+              <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center">
                  <div className="flex items-center gap-2 mb-4">
                     <Book className="text-[#4ade80] w-5 h-5" />
-                    <span className="text-white/60 text-xs font-mono uppercase tracking-widest">{selectedBook.price}</span>
+                    <span className="text-white/60 text-[10px] md:text-xs font-mono uppercase tracking-widest">{selectedBook.price}</span>
                  </div>
 
-                 <h3 className="text-2xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">{selectedBook.name}</h3>
-                 <p className="text-[#4ade80] font-mono text-sm uppercase tracking-widest mb-6">By {selectedBook.author}</p>
+                 <h3 className="text-xl md:text-4xl font-heading font-bold text-white mb-2 leading-tight">{selectedBook.name}</h3>
+                 <p className="text-[#4ade80] font-mono text-xs md:text-sm uppercase tracking-widest mb-6">By {selectedBook.author}</p>
                  
                  <div className="h-px w-10 bg-white/20 mb-6" />
                  
-                 <p className="text-gray-300 leading-relaxed text-base md:text-lg mb-8">
+                 <p className="text-gray-300 leading-relaxed text-sm md:text-lg mb-8">
                    {selectedBook.desc}
                  </p>
 
-                 <button className="w-full py-4 border border-[#4ade80] text-[#4ade80] font-bold uppercase hover:bg-[#4ade80] hover:text-black transition-colors">
+                 <button className="w-full py-3 md:py-4 border border-[#4ade80] text-[#4ade80] text-sm md:text-base font-bold uppercase hover:bg-[#4ade80] hover:text-black transition-colors">
                     Buy Now / Learn More
                  </button>
               </div>
