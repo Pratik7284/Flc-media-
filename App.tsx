@@ -13,6 +13,8 @@ import CustomCursor from './components/CustomCursor';
 import ServiceCard from './components/ArtistCard';
 import { LogoCloud } from './components/ui/logo-cloud-3';
 import { GLSLHills } from './components/ui/glsl-hills';
+import { Case } from './components/ui/cases-with-infinite-scroll';
+import { Globe as FooterGlobe } from './components/ui/globe';
 import { ServiceItem, TeamMember } from './types';
 
 // Data from FLC Reference
@@ -562,6 +564,8 @@ const App: React.FC = () => {
              </div>
           </div>
 
+          <Case />
+
           <div>
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                <motion.div
@@ -781,8 +785,8 @@ const App: React.FC = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="relative z-10 border-t border-white/10 py-12 md:py-16 bg-black/80 backdrop-blur-xl">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+      <footer className="relative z-10 border-t border-white/10 py-12 md:py-16 bg-black/80 backdrop-blur-xl overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-20">
           <div>
              <div className="font-heading text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-white">FOUR LEAF CLOVER</div>
              <p className="text-gray-400 max-w-sm text-sm mb-4">
@@ -799,6 +803,7 @@ const App: React.FC = () => {
             <a href="#" className="text-gray-400 hover:text-white font-bold uppercase text-xs tracking-widest transition-colors cursor-pointer" data-hover="true">Instagram</a>
           </div>
         </div>
+        <FooterGlobe className="top-auto left-auto -right-24 -bottom-24 w-[300px] h-[300px] opacity-50 pointer-events-none" />
       </footer>
 
       {/* Service Detail Modal */}

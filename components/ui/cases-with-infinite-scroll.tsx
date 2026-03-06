@@ -8,11 +8,16 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 
-interface CaseProps {
-  logos: { name: string; image: string }[];
-}
+const partnerImages = [
+  "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&h=200&fit=contain&q=80",
+  "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=200&h=200&fit=contain&q=80",
+  "https://images.unsplash.com/photo-1611162618071-b39a2ec055fb?w=200&h=200&fit=contain&q=80",
+  "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=200&h=200&fit=contain&q=80",
+  "https://images.unsplash.com/photo-1611162616475-46b635cb6868?w=200&h=200&fit=contain&q=80",
+  "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=200&h=200&fit=contain&q=80",
+];
 
-function Case({ logos }: CaseProps) {
+function Case() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -21,7 +26,7 @@ function Case({ logos }: CaseProps) {
       return;
     }
 
-    const timer = setTimeout(() => {
+    setTimeout(() => {
       if (api.selectedScrollSnap() + 1 === api.scrollSnapList().length) {
         setCurrent(0);
         api.scrollTo(0);
@@ -29,31 +34,28 @@ function Case({ logos }: CaseProps) {
         api.scrollNext();
         setCurrent(current + 1);
       }
-    }, 2000); // Slower for readability
-
-    return () => clearTimeout(timer);
+    }, 1000);
   }, [api, current]);
 
   return (
-    <div className="w-full py-12">
+    <div className="w-full py-20 lg:py-40">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
-          <Carousel 
-            setApi={setApi} 
-            className="w-full"
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
+          <div>
+            <h3 className="text-primary font-medium tracking-wider uppercase mb-2">Our Partners</h3>
+            <h2 className="text-xl md:text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular text-left">
+              Trusted by leading pharmaceutical brands
+            </h2>
+          </div>
+          <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {logos.map((partner, index) => (
-                <CarouselItem className="basis-1/2 md:basis-1/4 lg:basis-1/6" key={index}>
-                  <div className="flex rounded-xl aspect-square bg-white/5 border border-white/10 items-center justify-center p-6 group hover:bg-white transition-all duration-500">
+              {Array.from({ length: 15 }).map((_, index) => (
+                <CarouselItem className="basis-1/4 lg:basis-1/6" key={index}>
+                  <div className="flex rounded-md aspect-square bg-muted items-center justify-center p-6">
                     <img 
-                      src={partner.image} 
-                      alt={partner.name} 
-                      className="max-w-full max-h-full object-contain filter brightness-200 group-hover:brightness-100 transition-all duration-500"
+                      src={partnerImages[index % partnerImages.length]} 
+                      alt={`Partner ${index + 1}`} 
+                      className="w-full h-full object-contain mix-blend-multiply opacity-70 hover:opacity-100 transition-opacity" 
                     />
                   </div>
                 </CarouselItem>
@@ -66,4 +68,12 @@ function Case({ logos }: CaseProps) {
   );
 };
 
-export { Case };
+function CaseDemo() {
+  return (
+    <div className="block">
+      <Case />
+    </div>
+  );
+}
+
+export { Case, CaseDemo };
