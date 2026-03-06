@@ -761,7 +761,7 @@ const App: React.FC = () => {
                We create breakthrough patient education campaigns that deliver measurable impact.
              </p>
              <div className="flex gap-2 text-xs font-mono text-gray-500">
-               <span>© 2025 Four Leaf Clover. All rights reserved.</span>
+               <span>© 2026 Four Leaf Clover. All rights reserved.</span>
              </div>
           </div>
           
