@@ -13,7 +13,6 @@ import CustomCursor from './components/CustomCursor';
 import ServiceCard from './components/ArtistCard';
 import { LogoCloud } from './components/ui/logo-cloud-3';
 import { GLSLHills } from './components/ui/glsl-hills';
-import { Case } from './components/ui/cases-with-infinite-scroll';
 import { Globe as FooterGlobe } from './components/ui/globe';
 import { ServiceItem, TeamMember } from './types';
 
@@ -564,7 +563,6 @@ const App: React.FC = () => {
              </div>
           </div>
 
-          <Case />
 
           <div>
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
