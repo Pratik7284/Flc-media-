@@ -12,8 +12,8 @@ import GradientText from './components/GlitchText';
 import CustomCursor from './components/CustomCursor';
 import ServiceCard from './components/ArtistCard';
 import { LogoCloud } from './components/ui/logo-cloud-3';
-import { GLSLHills } from './components/ui/glsl-hills';
 import { Case } from './components/ui/cases-with-infinite-scroll';
+import { GLSLHills } from './components/ui/glsl-hills';
 import { Globe as FooterGlobe } from './components/ui/globe';
 import { ServiceItem, TeamMember } from './types';
 
@@ -70,7 +70,7 @@ const SERVICES: ServiceItem[] = [
 ];
 
 const PUBLISHING_ITEMS = [
-  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://aicdn.picsart.com/de7ac979-b564-4376-9ca5-18b77e45c953.jpg' },
+  { name: 'Finance for Non Finance', author: 'Vishal Thakkar', desc: 'Empower, Enlighten, and Excel in finance basics.', price: 'Book', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://rukminim2.flixcart.com/image/1536/1536/xif0q/book/p/r/3/finance-for-non-finance-original-imah33svyh7zefuu.jpeg?q=90' },
   { name: 'Moneywise: Women & Finance', author: 'Kiran Telang & Amit Trivedi', desc: 'Perspectives for Women Doctors.', price: 'Book', color: 'emerald', accent: 'bg-emerald-400/10 border-emerald-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0003.jpg' },
   { name: 'The Personal Finance Book for Doctors', author: 'Amar Pandit', desc: 'The ultimate financial guide for Doctors.', price: 'Book', color: 'teal', accent: 'bg-teal-400/10 border-teal-400/30', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0005.jpg' },
   { name: 'Doctors Immunize Your Financial Health', author: 'Amit Trivedi et al.', desc: '#Pandemic #Corona special edition.', price: 'Guide', color: 'white', accent: 'bg-white/5 border-white/20', image: 'https://flcmediasolutions.netlify.app/src/IMG-20250808-WA0006.jpg' },
@@ -85,7 +85,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '1',
     name: 'Anusha Ramani',
     role: 'Founder & CEO',
-    image: 'https://aicdn.picsart.com/56e1982a-2546-4911-994e-d5661968ad4e.jpg',
+    image: '/src/Mam.png',
     bio: 'Visionary leader and strategist who founded FLC to bring rare, breakthrough ideas to healthcare and lifestyle media.'
   },
   {
@@ -99,23 +99,30 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     id: '3',
     name: 'Pratik Tiwari',
-    role: 'Innovative Technical Lead',
-    image: 'https://aicdn.picsart.com/9eb9221e-e0ac-4595-a0c8-43050d8c0dcf.jpg',
-    bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools.'
+    role: 'Full Stack Web Developer',
+    image: '/src/Pratik Tiwari.png',
+    bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools, working on full-stack web development and digital platform solutions. He develops, deploys, and maintains production-ready websites and applications for healthcare and business clients while collaborating with international teams to deliver scalable and client-focused digital solutions.'
   },
   {
     id: '5',
-    name: 'Vivek Dubey',
-    role: 'Video Editor Intern',
-    image: 'https://flcmediasolutions.netlify.app/src/WhatsApp%20Image%202025-09-22%20at%2015.12.40_5eda09c8.jpg',
-    bio: 'A young, passionate creative mind assisting in editing, post-production, and design integration. Brings fresh energy to FLC\'s high-quality video outputs.'
+    name: 'Anuj Dubey',
+    role: 'Social Media Manager',
+    image: '/src/Anuj.png',
+    bio: 'Anuj Dubey leads social media strategy and digital engagement, managing content creation, campaign planning, and brand communication to strengthen the company’s online presence.'
   },
   {
     id: '6',
     name: 'Abrar Khan',
-    role: 'Books Publisher',
-    image: 'https://aicdn.picsart.com/52669918-815e-4a80-af90-5a2b3e001f74.jpg',
-    bio: 'Manages the publishing arm of FLC, ensuring the highest quality in educational books and guides for the medical fraternity.'
+    role: 'Admin & HR ',
+    image: '/src/Abrar.png',
+    bio: 'Abrar Khan manages administrative operations and human resource functions, ensuring smooth internal coordination, employee support, and efficient organizational processes.'
+  },
+  {
+    id: '7',
+    name: 'Rohit Shah',
+    role: 'Operation Head ',
+    image: '/src/rohit sir.jpeg',
+    bio: 'Rohit Shah oversees operational strategy and execution, ensuring smooth coordination across teams, efficient project delivery, and high standards of quality in all company operations.'
   }
 ];
 
@@ -258,7 +265,7 @@ const App: React.FC = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-4 z-50 cursor-default">
            <img 
-             src="https://aicdn.picsart.com/75671826-a8f3-4b2e-bc58-f080036614d2.png" 
+             src="/src/Logo Flc.jpg" 
              alt="Four Leaf Clover Logo" 
              className="w-20 h-20 md:w-32 md:h-32 object-contain filter-none"
            />
@@ -413,41 +420,6 @@ const App: React.FC = () => {
           </motion.div>
         </div>
       </header>
-
-      {/* NEW DEMO SECTION */}
-      <section className="relative py-32 flex flex-col items-center justify-center overflow-hidden px-4 bg-black/20">
-        <div className="absolute inset-0 z-0 pointer-events-none opacity-30">
-          <GLSLHills 
-            width="100%" 
-            height="100%" 
-            cameraZ={100} 
-            speed={0.2} 
-          />
-        </div>
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="space-y-8"
-          >
-            <h2 className="text-4xl md:text-7xl font-black tracking-tighter leading-tight">
-              <span className="italic font-thin text-3xl md:text-6xl block mb-2 text-emerald-400">Designs That Speak</span>
-              Louder Than Words
-            </h2>
-            <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed">
-              We craft stunning visuals and user-friendly experiences that help your brand stand out and connect with your audience.
-            </p>
-            <div className="flex justify-center gap-4 pt-4">
-              <div className="w-12 h-1 bg-emerald-500 rounded-full" />
-              <div className="w-12 h-1 bg-emerald-500/30 rounded-full" />
-              <div className="w-12 h-1 bg-emerald-500/10 rounded-full" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* SERVICES SECTION */}
       <section id="services" className="relative z-10 py-20 md:py-32">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6">
@@ -492,9 +464,9 @@ const App: React.FC = () => {
             >
               <div className="flex items-center gap-2 mb-6">
                 <span className="text-[#4ade80] text-xl">♣</span>
-                <h3 className="font-heading text-2xl font-bold tracking-widest text-white">The Story</h3>
+                <h3 className="font-heading text-5xl font-bold tracking-widest text-white">The Story</h3>
               </div>
-              <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6 leading-tight">
+              <h2 className="text-2xl md:text-2xl font-heading font-bold mb-6 leading-tight">
                 Rarity in <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4ade80] to-[#10b981]">Every Idea</span>
               </h2>
               <p className="text-base md:text-lg text-gray-300 leading-relaxed font-light">
@@ -564,7 +536,6 @@ const App: React.FC = () => {
              </div>
           </div>
 
-          <Case />
 
           <div>
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -695,10 +666,7 @@ const App: React.FC = () => {
             <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#022c22] to-transparent z-10 pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#022c22] to-transparent z-10 pointer-events-none" />
             
-            <LogoCloud 
-              logos={PARTNERS.map(p => ({ src: p.image, alt: p.name }))} 
-              className="py-12"
-            />
+            <Case logos={PARTNERS} />
           </div>
 
           <div className="mt-12 flex flex-wrap justify-center gap-4 md:gap-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
