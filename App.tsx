@@ -85,7 +85,7 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '1',
     name: 'Anusha Ramani',
     role: 'Founder & CEO',
-    image: '/src/Mam.png',
+    image: 'https://ibb.co/mVkDWg8T',
     bio: 'Visionary leader and strategist who founded FLC to bring rare, breakthrough ideas to healthcare and lifestyle media.'
   },
   {
@@ -100,28 +100,28 @@ const TEAM_MEMBERS: TeamMember[] = [
     id: '3',
     name: 'Pratik Tiwari',
     role: 'Full Stack Web Developer',
-    image: '/src/Pratik Tiwari.png',
+    image: 'https://ibb.co/xK34KSHV',
     bio: 'Drives innovation in digital campaigns, backend systems & AI-powered media tools, working on full-stack web development and digital platform solutions. He develops, deploys, and maintains production-ready websites and applications for healthcare and business clients while collaborating with international teams to deliver scalable and client-focused digital solutions.'
   },
   {
     id: '5',
     name: 'Anuj Dubey',
     role: 'Social Media Manager',
-    image: '/src/Anuj.png',
+    image: 'https://ibb.co/3Ym15RXq',
     bio: 'Anuj Dubey leads social media strategy and digital engagement, managing content creation, campaign planning, and brand communication to strengthen the company’s online presence.'
   },
   {
     id: '6',
     name: 'Abrar Khan',
     role: 'Admin & HR ',
-    image: '/src/Abrar.png',
+    image: 'https://ibb.co/C3gg7PqD',
     bio: 'Abrar Khan manages administrative operations and human resource functions, ensuring smooth internal coordination, employee support, and efficient organizational processes.'
   },
   {
     id: '7',
     name: 'Rohit Shah',
-    role: 'Operation Head ',
-    image: '/src/rohit sir.jpeg',
+    role: 'Operation Head',
+    image: 'https://ibb.co/Mkj6kzPL',
     bio: 'Rohit Shah oversees operational strategy and execution, ensuring smooth coordination across teams, efficient project delivery, and high standards of quality in all company operations.'
   }
 ];
@@ -265,7 +265,7 @@ const App: React.FC = () => {
         {/* Logo Section */}
         <div className="flex items-center gap-4 z-50 cursor-default">
            <img 
-             src="/src/Logo Flc.jpg" 
+             src="https://ibb.co/m5FJTx48" 
              alt="Four Leaf Clover Logo" 
              className="w-20 h-20 md:w-32 md:h-32 object-contain filter-none"
            />
